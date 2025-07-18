@@ -1,0 +1,76 @@
+{
+    "include": [
+        "$HOME/.config/waybar/Modules",
+        "$HOME/.config/waybar/ModulesWorkspaces",
+        "$HOME/.config/waybar/ModulesCustom"
+    ],
+    "layer": "top",
+    "position": "top",
+    "exclusive": true,
+    "passthrough": false,
+    "gtk-layer-shell": true,
+    "margin-left": 6,
+    "margin-right": 6,
+    "margin-top": 2,
+    "custom/prayer": {
+        "exec": "node ~/.config/waybar/scripts/athan.js",
+        "interval": 60,
+        "return-type": "json"
+    },
+    "group/system": {
+        "orientation": "inherit",
+        "drawer": {
+            "transition-duration": 500,
+            "children-class": "pulseaudio",
+            "transition-left-to-right": true
+        },
+        "modules": [
+            "battery",
+            "bluetooth",
+            "pulseaudio",
+            "pulseaudio#microphone",
+            "power-profiles-daemon"
+        ]
+    },
+    "group/power": {
+        "orientation": "inherit",
+        "drawer": {
+            "transition-duration": 300,
+            "children-class": "not-memory",
+            "transition-left-to-right": false
+        },
+        "modules": [
+            "custom/shutdown",
+            "custom/reboot"
+        ]
+    },
+    "group/mobo_drawer": {
+        "orientation": "inherit",
+        "drawer": {
+            "transition-duration": 500,
+            "children-class": "cpu",
+            "transition-left-to-right": true
+        },
+        "modules": [
+            "memory",
+            "cpu",
+            "temperature",
+            "disk"
+        ]
+    },
+    "modules-left": [
+        "hyprland/workspaces#rw",
+        "custom/prayer",
+        "custom/weather"
+    ],
+    "modules-center": [
+        "hyprland/window"
+    ],
+    "modules-right": [
+        "group/mobo_drawer",
+        "clock#2",
+        "network",
+        "group/system",
+        "group/power"
+    ]
+}

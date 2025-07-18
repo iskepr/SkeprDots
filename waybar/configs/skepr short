@@ -1,0 +1,36 @@
+{
+    "include": [
+        "$HOME/.config/waybar/Modules",
+        "$HOME/.config/waybar/ModulesWorkspaces",
+        "$HOME/.config/waybar/ModulesCustom",
+        "$HOME/.config/waybar/ModulesGroups",
+        "$HOME/.config/waybar/UserModules"
+    ],
+    "layer": "top",
+    "position": "top",
+    "exclusive": true,
+    "margin-top": 2,
+    "width": 1100,
+    "custom/prayer": {
+        "exec": "node ~/.config/waybar/athan.js",
+        "interval": 60,
+        "return-type": "json"
+    },
+    "modules-left": [
+        "hyprland/workspaces#rw",
+        "custom/prayer",
+        "custom/weather"
+    ],
+    "modules-center": [
+        "hyprland/window"
+    ],
+    "modules-right": [
+        "group/mobo_drawer",
+        "network",
+        "bluetooth",
+        "clock#2",
+        "group/audio",
+        "battery",
+        "custom/power"
+    ]
+}
