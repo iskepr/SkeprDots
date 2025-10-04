@@ -9,9 +9,6 @@
     "exclusive": true,
     "passthrough": false,
     "gtk-layer-shell": true,
-    "margin-left": 6,
-    "margin-right": 6,
-    "margin-top": 2,
     "custom/prayer": {
         "exec": "node ~/.config/waybar/scripts/athan.js",
         "interval": 60,
