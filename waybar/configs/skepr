@@ -6,6 +6,8 @@
     ],
     "layer": "top",
     "position": "top",
+    "margin-left": 10,
+    "margin-right": 10,
     "exclusive": true,
     "passthrough": false,
     "gtk-layer-shell": true,
@@ -38,6 +40,7 @@
         },
         "modules": [
             "custom/shutdown",
+            "custom/quit",
             "custom/reboot"
         ]
     },
@@ -65,9 +68,9 @@
     ],
     "modules-right": [
         "group/mobo_drawer",
-        "clock#2",
         "network",
         "group/system",
-        "group/power"
+        "group/power",
+        "clock#2"
     ]
 }

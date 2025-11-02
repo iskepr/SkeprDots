@@ -62,11 +62,11 @@
 		"warning": 30,
 		"critical": 15
 	},
-	"format": "{icon} {capacity}%",
-	"format-charging": " {capacity}%",
-	"format-plugged": "󱘖 {capacity}%",
+	"format": "<img/>{capacity}%",
+	"format-charging": "<img/> {capacity}%",
+	"format-plugged": "<img/> {capacity}%",
 	"format-alt-click": "click",
-	"format-full": "{icon}",
+	"format-full": "<img/>",
 	"format-alt": "{time}",
 	"format-icons": [
 		"󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"
@@ -119,7 +119,7 @@
 },
 
 "clock#2": {
-    "format": "{:%I:%M %d/%m}", // AM PM format
+    "format": "{:%a %b%e  %I:%M %p}", // AM PM format
     // "format": "  {:%H:%M}", // 24H
     "format-alt": "{:%A  |  %H:%M  |  %e %B}",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
@@ -275,9 +275,10 @@
 
 "network": {
 	"format": "{ifname}",
-	"format-wifi": "{icon}",
-	"format-ethernet": "󰌘",
-	"format-disconnected": "󰌙",
+"format-wifi": "<img/>",
+"format-ethernet": "<img/>",
+"format-disconnected": "<img/>",
+
 	"tooltip-format": "{ipaddr}  {bandwidthUpBits}  {bandwidthDownBits}",
 	"format-linked": "󰈁 {ifname} (No IP)",
 	"tooltip-format-wifi": "{essid} {icon} {signalStrength}%",
