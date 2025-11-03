@@ -3,13 +3,10 @@
 ## Dependencies
 
 ``` bash
-yay -S stow
+curl -fsSL https://install.danklinux.com | sh
 ```
 ``` bash
-stow -t ~/.config/ .
-```
-``` bash
-yay -S fakeroot rofi waybar swww mako nodejs npm kitty warp-terminal windsurf flatpak swaync bc jq ffmpeg libnotify yad brightnessctl grim slurp pamixer kdeconnectd wl-paste hypridle hyprlock
+yay -S fakeroot swww nodejs npm kitty warp-terminal windsurf flatpak swaync bc jq ffmpeg libnotify yad brightnessctl grim slurp pamixer kdeconnectd wl-paste hypridle hyprlock
 ```
 ``` bash
 flatpak install flathub app.zen_browser.zen
