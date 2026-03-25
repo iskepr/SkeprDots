@@ -37,7 +37,7 @@ exec-once = $HOME/.config/hypr/initial-boot.sh
 exec-once = xhost +local:root
 exec-once = sleep 1 && pactl set-source-port alsa_input.pci-0000_06_00.6.analog-stereo analog-input-mic
 exec-once = dms run
-exec-once = kdeconnect-cli -a
+exec-once = kdeconnect-indicator &
 exec-once = blueman-applet
 exec-once = bash -c "wl-paste --watch cliphist store &"
 
@@ -178,7 +178,6 @@ misc {
 # WINDOW RULES
 # ==================
 windowrulev = tile, class:^(org\.wezfurlong\.wezterm)$
-windowrule = match:class ^(com\.skepr\.hodor)$, opacity 1
 
 windowrulev = rounding 12, class:^(org\.gnome\.)
 windowrulev = noborder, class:^(org\.gnome\.)
@@ -386,4 +385,11 @@ bind = CTRL, XF86Launch1, exec, grimblast copy screen
 # === System Controls ===
 bind = $mod SHIFT, P, dpms, off
 source = ./dms/outputs.conf
-source = ./dms/cursor.conf
+
+
+
+
+
+
+
+
